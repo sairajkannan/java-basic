@@ -1,58 +1,39 @@
-package payilagam.java.basics.day1;
+import java.util.Scanner;
 
 public class Calculator {
 
 	public static void main(String[] args) {
-		Calculator casio=new Calculator();
-		int result=casio.add(5,4);
-		System.out.println(result);
-		System.out.println(casio.sub(result,4));
-		System.out.println(casio.mul(5,4));
-		System.out.println(casio.div(5,4));
-	}
-
-	private int mul(int i, int j) {
-		int c;
-		c=i*j;
-	
-		return c;
 		// TODO Auto-generated method stub
-		
-	}
+		Scanner sc = new Scanner(System.in);
+		System.out.println("enter a , b values");
+		int a = sc.nextInt();
+		int b = sc.nextInt();
+		System.out.println("1.add \n" + "2.sub \n"+ "3.mul \n" + "4.div");
 
-	private int add(int i, int j) {
-		int c;
-		c=i+j;
-	
-		return c;
-		// TODO Auto-generated method stub
-		
-	}
+		System.out.println("make a choice");
+		int s = sc.nextInt();
+		switch(s)
+		{
+		case 1 : 
+			int c = a + b ;
+			System.out.println(c);
+			break;
+		case 2 : 
+			int d = a - b;
+			System.out.println(d);
+			break;
+		case 3 :
+			int e = a*b;
+			System.out.println(e);
+			break;
+		case 4 : 
+			int f = a/b;
+			System.out.println(f);
+			break;
 
-	private int sub(int i, int j) {
-		int c;
-		c=i-j;
-		
-		// TODO Auto-generated method stub
-		return c;
-		
-	}
 
-	private double div(double i,double j) {
-		double c;
-		c=i/j;
-		
-		return c;
-		// TODO Auto-generated method stub
-		
-	}
 
-	private void add() {
-		// TODO Auto-generated method stub
-		int a=5,b=6;
-		int c=a*b;
-		
-		
+		}
 	}
 
 }
