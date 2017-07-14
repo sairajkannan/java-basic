@@ -1,13 +1,16 @@
 package payilagam.java.basics.day1;
 
 public class Customer {
-	static String name ="sairaj";
-	private static Object mobile;
+	 static String name ="sairaj";
+     static int mobile=1234;
 
 	public static void main(String[] args) {
-		Bank sbi=new Bank();
-		sbi.CreateAccount(name);
+		Customer customerobj=new Customer();
+	    Bank sbi=new Bank(customerobj);
+
+		sbi.createAccount(name, mobile);
+		sbi.createAccount(name,mobile);
+    	sbi.CreateAccount(customerobj);
 	
-		sbi.CreateAccount(name,mobile);
 }
 }
