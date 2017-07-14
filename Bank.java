@@ -1,8 +1,16 @@
 package payilagam.java.basics.day1;
 
  public class Bank {
+	 String name;
+	 int mobile;
 	int balance=1000;
-  void enquire(int accNo)
+  public Bank(Customer customerobj) {
+	  name=customerobj.name;
+	  mobile=customerobj.mobile;
+		// TODO Auto-generated constructor stub
+	}
+
+void enquire(int accNo)
 	{
 
 }
@@ -17,12 +25,20 @@ package payilagam.java.basics.day1;
 	return  balance;
 	
 }
-public int CreateAccount(String name) {
+ void createAccount(String name,int mobile)
+ {
+ }
+ 
+void CreateAccount(Customer customerobj) {
+	String n=customerobj.name;
+	System.out.println(n);
+	
 	// TODO Auto-generated method stub
-	return 0;
+
 }
-public void CreateAccount(String name, Object mobile) {
+public void CreateAccount(String name, int mobile) {
 	// TODO Auto-generated method stub
 	
 }
+
 }
