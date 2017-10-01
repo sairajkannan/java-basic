@@ -1,44 +1,39 @@
-package payilagam.java.basics.day1;
+package javaprogram;
 
- public class Bank {
-	 String name;
-	 int mobile;
+import java.util.Scanner;
+
+public class Bank {
 	int balance=1000;
-  public Bank(Customer customerobj) {
-	  name=customerobj.name;
-	  mobile=customerobj.mobile;
-		// TODO Auto-generated constructor stub
+	public static void main(String[] args) {
+		
+		
+		Bank sbi=new Bank();
+		
+		// TODO Auto-generated method stub
+		System.out.println("enter amount for withdraw");
+		Scanner s=new Scanner(System.in);
+		int withdrwamo=s.nextInt();
+		System.out.println("enter the amount for deposite");
+		int depoamo=s.nextInt();
+		sbi.deposite(depoamo);
+		sbi.withdraw(withdrwamo);
+		
 	}
 
-void enquire(int accNo)
-	{
+	private void withdraw(int amount) {
+	
+		balance=balance+amount;
+		System.out.println(balance);
+		// TODO Auto-generated method stub
+		
+	}
 
-}
-	  void withdraw(int amount)
-	{
+	private void deposite(int amount) {
+
 		balance=balance-amount;
-	System.out.println("your balance"+balance);
+		System.out.println(balance);
+		// TODO Auto-generated method stub
+		
 	}
- int deposit(int amount)
-{
-	balance=balance+amount;
-	return  balance;
-	
-}
- void createAccount(String name,int mobile)
- {
- }
- 
-void CreateAccount(Customer customerobj) {
-	String n=customerobj.name;
-	System.out.println(n);
-	
-	// TODO Auto-generated method stub
-
-}
-public void CreateAccount(String name, int mobile) {
-	// TODO Auto-generated method stub
-	
-}
 
 }
